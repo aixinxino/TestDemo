@@ -1,0 +1,1 @@
+import{_ as t}from"./index-De4LZzwu.js";import{c as e,o as n,e as o}from"./vendor-Dg47gR18.js";const r={class:"page-content"};const s=t({},[["render",function(t,s){return n(),e("div",r,s[0]||(s[0]=[o("h1",null,"ArticleEdit",-1)]))}]]);export{s as default};
