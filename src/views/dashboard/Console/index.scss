@@ -1,0 +1,389 @@
+/* Theme Variables */
+:root {
+  /* Light theme variables */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e4e7ed;
+  --card-bg: #ffffff;
+  --hover-bg: #f5f7fa;
+  --secondary-text: #909399;
+  --header-height: 60px;
+  --primary-button-bg: #4e6ef3;
+  --primary-button-hover: #3b5ef0;
+  --button-border: #2c3e50;
+  --tag-bg: rgba(64, 158, 255, 0.1);
+  --tag-color: #409eff;
+  --row-bg: #f8f9fa;
+  --row-border: #e4e7ed;
+  --row-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --row-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --row-hover-bg: #f0f2f5;
+}
+
+/* Dark theme variables */
+html.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --card-bg: #2d2d2d;
+  --hover-bg: #363636;
+  --secondary-text: #a3a6ad;
+  --button-border: #4a4a4a;
+  --tag-bg: rgba(64, 158, 255, 0.1);
+  --tag-color: #409eff;
+  --row-bg: #2d2d2d;
+  --row-border: #333333;
+  --row-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --row-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --row-hover-bg: #363636;
+}
+
+.home-container {
+  padding: 20px 24px;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-color);
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 4px;
+
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    .right {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      .el-button {
+        height: 36px;
+        padding: 0 16px;
+        border-radius: 6px;
+        font-weight: 500;
+
+        &--primary {
+          background-color: var(--primary-button-bg);
+          border: none;
+
+          &:hover {
+            background-color: var(--primary-button-hover);
+          }
+
+          &.is-plain {
+            background-color: transparent;
+            border: 1px solid var(--button-border);
+            color: var(--text-color);
+
+            &:hover {
+              border-color: var(--primary-button-bg);
+              color: var(--primary-button-bg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 0 4px;
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    .el-button {
+      color: #4e6ef3;
+      font-weight: 500;
+    }
+  }
+
+  .templates-section {
+    margin-bottom: 48px;
+    
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 4px;
+    }
+
+    .template-card {
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      .template-image {
+        width: 100%;
+        height: 180px;
+        background: var(--card-bg);
+        overflow: hidden;
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .template-info {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--card-bg);
+
+        span {
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .el-button {
+          padding: 8px 12px;
+          font-size: 13px;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  .recent-section {
+    margin-bottom: 48px;
+
+    .recent-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 24px;
+      padding: 4px;
+    }
+
+    .recent-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .file-preview {
+        height: 160px;
+        overflow: hidden;
+        background: var(--card-bg);
+        
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .file-info {
+        padding: 16px;
+        background: var(--card-bg);
+
+        .file-name {
+          display: block;
+          font-weight: 500;
+          margin-bottom: 6px;
+          font-size: 14px;
+        }
+
+        .file-date {
+          color: var(--secondary-text);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .files-section {
+    padding: 4px;
+
+    .el-table {
+      background-color: transparent;
+      
+      &::before {
+        display: none;
+      }
+      
+      th.el-table__cell {
+        background-color: transparent;
+        border-bottom: none;
+        color: var(--text-color);
+        padding: 12px 0;
+        font-weight: 500;
+        font-size: 14px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+
+      td.el-table__cell {
+        background-color: transparent;
+        border-bottom: none;
+        color: var(--text-color);
+        padding: 12px 0;
+        font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+
+      tr.el-table__row {
+        transition: all 0.3s ease;
+        margin: 4px 0;
+        border-radius: 6px;
+        background-color: var(--row-bg);
+        border: 1px solid var(--row-border);
+        box-shadow: var(--row-shadow);
+        
+        &:hover {
+          background-color: var(--row-hover-bg);
+          box-shadow: var(--row-hover-shadow);
+          transform: translateY(-1px);
+          border-color: var(--primary-button-bg);
+
+          .preview-thumbnail {
+            transform: scale(1.05);
+          }
+
+          .el-tag {
+            background-color: var(--tag-bg);
+            border-color: var(--tag-color);
+          }
+        }
+      }
+
+      .name-cell {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .preview-thumbnail {
+          width: 32px;
+          height: 32px;
+          border-radius: 4px;
+          overflow: hidden;
+          background: var(--card-bg);
+          transition: transform 0.3s ease;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        span {
+          transition: color 0.3s ease;
+        }
+      }
+
+      .user-cell {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .el-avatar {
+          background: var(--primary-button-bg);
+          transition: transform 0.3s ease;
+        }
+
+        span {
+          color: var(--text-color);
+          transition: color 0.3s ease;
+        }
+      }
+
+      .location-cell {
+        .el-tag {
+          background-color: var(--tag-bg);
+          border-color: transparent;
+          color: var(--tag-color);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    .el-dropdown {
+      .el-dropdown-link {
+        font-size: 14px;
+        color: var(--text-color);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+}
+
+/* Element Plus components theme adaptation */
+.el-button {
+  &--text {
+    color: var(--text-color);
+    
+    &:hover {
+      color: var(--primary-button-bg);
+    }
+  }
+}
+
+.el-card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-color);
+  box-shadow: none;
+
+  &:hover {
+    border-color: var(--primary-button-bg);
+  }
+}
+
+.el-dropdown {
+  color: var(--text-color);
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+  
+  &:hover {
+    background: var(--secondary-text);
+  }
+} 
