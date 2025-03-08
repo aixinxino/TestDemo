@@ -1,1 +1,0 @@
-import{_ as t}from"./Exception-BEri9nWE.js";import{d as s,Z as e,L as a,u as n,o}from"./vendor-DwyDskVC.js";import"./index-DeV9pv5H.js";const r=s({__name:"500",setup(s){const r=e({title:"500",desc:"抱歉，服务器出错了",btnText:"返回首页",imgUrl:"/TestDemo/assets/500-DtnECEn9.png"});return(s,e)=>{const m=t;return o(),a(m,{data:n(r)},null,8,["data"])}}});export{r as default};
