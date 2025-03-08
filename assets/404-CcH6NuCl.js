@@ -1,0 +1,1 @@
+import{_ as t}from"./Exception-DqUk8l0B.js";import{d as s,Z as e,L as a,u as o,o as n}from"./vendor-DwyDskVC.js";import"./index-CiEjdBBv.js";const r=s({__name:"404",setup(s){const r=e({title:"404",desc:"抱歉，你访问的页面不存在",btnText:"返回首页",imgUrl:"/TestDemo/assets/404-Zjuae4tx.png"});return(s,e)=>{const m=t;return n(),a(m,{data:o(r)},null,8,["data"])}}});export{r as default};
