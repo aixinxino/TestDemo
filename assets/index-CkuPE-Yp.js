@@ -1,0 +1,1 @@
+import{_ as r}from"./index-CPv9IKtj.js";import{c as n,e as o,o as e}from"./vendor-CRRrigWG.js";const s=r({},[["render",function(r,s){return e(),n("div",null,s[0]||(s[0]=[o("h1",null,"设置页面",-1)]))}]]);export{s as default};
