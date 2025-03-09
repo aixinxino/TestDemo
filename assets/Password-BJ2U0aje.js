@@ -1,1 +1,0 @@
-import{_ as n}from"./index-B4jH3BKk.js";import{c as o,o as s,e}from"./vendor-DwyDskVC.js";const r={class:"page-content"};const t=n({},[["render",function(n,t){return s(),o("div",r,t[0]||(t[0]=[e("h1",null,"修改密码",-1)]))}]]);export{t as default};
