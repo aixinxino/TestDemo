@@ -1,1 +1,0 @@
-import{_ as s}from"./Exception-Bi2Y_d59.js";import{d as t,J as e,y as a,o,u as n}from"./vendor-DfTV9N1v.js";import"./index-D3_GDXl6.js";const r=t({__name:"403",setup(t){const r=e({title:"403",desc:"抱歉，你无权访问该页面",btnText:"返回首页",imgUrl:"/TestDemo/assets/403-CReylOEs.png"});return(t,e)=>{const m=s;return o(),a(m,{data:n(r)},null,8,["data"])}}});export{r as default};
